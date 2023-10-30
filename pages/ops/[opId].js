@@ -99,7 +99,8 @@ export const OpDetailPage = ({
             { body: JSON.stringify(op) })
         )
         setTab('about')
-        replace(pathname, `/ops/${res[0]._id}`) // reload to the new id page
+        // replace(pathname, `/ops/${res[0]._id}`) // reload to the new id page
+        router.push(`/ops/${res[0]._id}`)
       }
       message.success('Saved.')
     }, [dispatch, op, pathname, replace, updateTab])

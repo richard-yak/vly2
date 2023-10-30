@@ -22,7 +22,7 @@ services:
     container_name: voluntarily-mongodb
     image: mongo:latest
     volumes:
-      - dbdata:/data/db
+      - dbdata:/Users/richard/data/db
     ports:
       - 27017:27017
 

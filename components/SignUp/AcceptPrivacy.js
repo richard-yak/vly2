@@ -8,7 +8,7 @@ import Image from 'next/image'
 export const AcceptPrivacy = ({ children }) =>
   <HalfGrid style={{ paddingTop: 0 }}>
     <div id='leftCol'>
-      <Image layout='intrinsic' alt='privacy icon' style={{ width: '100%' }} src='/static/img/sign-up/privacy.svg' />
+      {/*<Image layout='intrinsic' alt='privacy icon' style={{ width: '100%', height: '100%' }} src='/static/img/sign-up/privacy.svg' />*/}
     </div>
     <div id='rightCol'>
       <Privacy />

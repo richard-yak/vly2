@@ -63,7 +63,7 @@ const listActivities = async (req, res) => {
     try {
       let acts = await Activity
         .accessibleBy(req.ability, Action.LIST)
-        .find(query)
+        .find()
         .select(select)
         .populate('offerOrg', 'name')
         .sort(sort)

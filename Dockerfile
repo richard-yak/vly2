@@ -1,6 +1,13 @@
-FROM node:16 as base
+FROM node:16-alpine3.15 as base
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
+
+RUN apk add --no-cache chromium
+RUN rm -rf /var/cache/apk/* /tmp/*
+
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
+ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
+
 
 FROM base as production_build
 RUN mkdir -p /usr/src/app
